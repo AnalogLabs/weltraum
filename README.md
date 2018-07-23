@@ -1,9 +1,11 @@
 # Weltraum
-Log GPS data from USB module in real time
+## Log GPS data from USB module in real time
+```
 Author:  Omar Metwally, MD
          omar@analog.earth
 License: Analog Labs
 Source:  https://github.com/AnalogLabs/weltraum
+```
 
 ## Usage
 ### 1. Get USB GPRS module path
