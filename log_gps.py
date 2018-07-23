@@ -6,18 +6,11 @@
 # License: ANALOG LABS
 
 import serial, sys, os
-from time import time
-
-ser = serial.Serial('/dev/ttyACM0')
-latitude = ''
-longitude = ''# fleetfox.py
-
-import serial, sys, os
 from time import time, sleep
 from random import randint
+import RPi.GPIO as GPIO
 from sys import argv
 
-import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18,GPIO.OUT)
 
