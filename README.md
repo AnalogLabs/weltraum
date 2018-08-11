@@ -8,24 +8,26 @@ Source:  https://github.com/AnalogLabs/weltraum
 ```
 
 ## Usage
+
 ### 1. Get USB GPRS module path
 ```
 dmesg | grep tty
 ```
 (On my machine, this is /dev/ttyACM0)
 
-### 2. Log latitude and longitude to file
+### 2. Run the weltraum.py script
 ```
-sudo python3 log_gps.py {description}
-where {description} is an optional argument to label
-GPS coordinates written to file
+sudo python3 weltraum.py
 ```
+Superuser is required because this script logs latitude, longitude, altitude, velocity, and distance traveled to file.
 
-### 3. Run on Pi boot (optional)
+Accurancy of distance traveled depends on GPS signal quality.
+
+### 3. Run on system boot (optional)
 ```
 cd ~
 sudo vim .bashrc
     (add this line to the bottom:)
-    python /home/pi/Desktop/weltraum/log_gps.py 
+    python /home/pi/Desktop/weltraum/weltraum.py 
 ```
 
